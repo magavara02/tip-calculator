@@ -9,7 +9,6 @@ html{
 }
 
 .attribution { 
-    margin-top: auto;
     margin-bottom: 1rem;
     font-size: 0.8rem; 
     text-align: center;
@@ -33,6 +32,8 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 90%;
 }
 
 .title{
@@ -56,10 +57,10 @@ main{
 }
 
 .leftside{
-    width: 25rem;
+    width: 23rem;
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem 1rem 1rem;
+    padding: 1rem;
     /* gap: 2rem; */
     justify-content: space-between;
     
@@ -105,11 +106,11 @@ main{
     outline: 0px;
     border-radius: 5px;
     height: 3rem;
-    width: 7rem;
+    width: 6.5rem;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
-    margin: .5rem;
+    margin: .4rem;
 }
 
 .tip_amount_container .tip_selection input:focus{
@@ -145,6 +146,7 @@ flex-direction: column;
 align-items: center;
 justify-content: space-evenly;
 width: 25rem;
+margin-left: 0rem;
 }
 
 .rightside .values_div{
@@ -192,7 +194,6 @@ width: 25rem;
 .tip_amount_container .tip_selection{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .people_error_message, .bill_error_message{
