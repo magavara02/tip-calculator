@@ -1,0 +1,238 @@
+*{
+    margin: 0px;
+}
+
+html{
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    color: hsl(186, 14%, 43%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(185, 41%, 84%);
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    letter-spacing: .5rem;
+    font-size: 1.3rem;
+    word-wrap: break-word;
+    width: 6rem;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 1.5rem;
+}
+
+.container{
+    background-color: white;
+    border-radius: 15px;
+    min-height: 25rem;
+    /* width: 50rem; */
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+.leftside{
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 1rem 1rem;
+    /* gap: 2rem; */
+    justify-content: space-between;
+    
+}
+
+.money_input_div, .people_input_div{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    border-radius: 5px;
+    background-color: hsl(189, 41%, 97%);
+    border: 2px solid transparent;
+}
+
+.money_input_div span, .people_input_div span{
+    font-size: 1.7rem;
+    margin-left: 1rem;
+}
+
+.money_input, .people_input{
+    font-size: 1.5rem;
+    outline: 0px;
+    border: 0px;
+    border-radius: 10px;
+    padding: .5rem;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    background-color: hsl(189, 41%, 97%);
+    width: 100%;
+}
+
+.money_input_div:focus-within, .people_input_div:focus-within{
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.tip_amount_container .tip_selection button,
+.tip_amount_container .tip_selection input{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-size: 1.7rem;
+    border: 0px;
+    outline: 0px;
+    border-radius: 5px;
+    height: 3rem;
+    width: 7rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    margin: .5rem;
+}
+
+.tip_amount_container .tip_selection input:focus{
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+::placeholder{
+    color: hsl(183, 100%, 15%);
+}
+
+.tip_amount_container .tip_selection input{
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+}
+
+.tip_amount_container .tip_selection .active:not(.custom){
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
+
+
+.rightside{
+background-color: hsl(183, 100%, 15%);
+height: 100%;
+width: 50%;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+width: 25rem;
+}
+
+.rightside .values_div{
+    width: 80%;
+    /* border: 1px solid red; */
+    height: 15rem;
+}
+
+.rightside .tip_amount_container,
+ .rightside .total_amount_container{
+    display: flex;
+    width: 100%;
+}
+
+.rightside .tip_amount_container .desc p:nth-child(1), 
+.rightside .total_amount_container .desc p:nth-child(1){
+    color: white;
+}
+
+.rightside .tip_amount_container .desc p:nth-child(2), 
+.rightside .total_amount_container .desc p:nth-child(2){
+    color: hsl(186, 14%, 43%);
+}
+
+.rightside .tip_amount_container .total_tip_amount, 
+.rightside .total_amount_container .total_amount{
+    color: hsl(172, 67%, 45%);
+    font-size: 3rem;
+    margin-left: auto;
+}
+
+.rightside button{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    outline: 0px;
+    border: 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: .7rem;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tip_amount_container .tip_selection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.people_error_message, .bill_error_message{
+    color: red;
+    margin-right: 1rem;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    html{
+        font-size: 14px;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftside{
+        width: 23rem;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding: 0;
+    }
+
+    .rightside{
+        width: 23rem;
+    }
+
+    .tip_amount_container .tip_selection{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tip_amount_container .tip_selection button,
+.tip_amount_container .tip_selection input{
+    height: 3.5rem;
+    width: 10rem;
+    margin: .7rem .7rem 0 0;
+}
+
+.rightside button{
+    margin-bottom: 1.5rem;
+}
+
+.rightside .values_div{
+    margin-top: 1.5rem;
+    height: 11rem;
+}
+
+.title{
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+}
