@@ -8,21 +8,12 @@ html{
     color: hsl(186, 14%, 43%);
 }
 
-.attribution { 
-    margin-bottom: 1rem;
-    font-size: 0.8rem; 
-    text-align: center;
- }
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
-}
-
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 95vh;
+    height: 90vh;
     width: 100vw;
     background-color: hsl(185, 41%, 84%);
 }
@@ -34,6 +25,7 @@ main{
     align-items: center;
     justify-content: center;
     height: 90%;
+    margin-bottom: 1rem;
 }
 
 .title{
@@ -209,6 +201,7 @@ margin-left: 0rem;
     .container{
         flex-direction: column;
         align-items: center;
+        min-height: 50rem;
     }
 
     .leftside{
@@ -228,23 +221,23 @@ margin-left: 0rem;
     }
 
     .tip_amount_container .tip_selection button,
-.tip_amount_container .tip_selection input{
-    height: 3.5rem;
-    width: 10rem;
-    margin: .7rem .7rem 0 0;
-}
+    .tip_amount_container .tip_selection input{
+        height: 3.5rem;
+        width: 10rem;
+        margin: .7rem .7rem 0 0;
+    }
 
-.rightside button{
-    margin-bottom: 1.5rem;
-}
+    .rightside button{
+        margin-bottom: 1.5rem;
+    }
 
-.rightside .values_div{
-    margin-top: 1.5rem;
-    height: 11rem;
-}
+    .rightside .values_div{
+        margin-top: 1.5rem;
+        height: 11rem;
+    }
 
-.title{
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
-}
+    .title{
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
 }
