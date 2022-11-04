@@ -23,6 +23,11 @@ moneyInput.addEventListener("focusout", ()=>{
             billErrorMessage.style.display = "block";
             moneyInputDiv.style.border = "2px solid red";
             moneyInput.value = "";
+        }else if(moneyInput.value < 0){
+            billErrorMessage.innerText = "Can't be negative";
+            billErrorMessage.style.display = "block";
+            moneyInputDiv.style.border = "2px solid red";
+            moneyInput.value = "";
         }else{
             billErrorMessage.style.display = null;
             moneyInputDiv.style.border = null;
@@ -45,6 +50,11 @@ peopleInput.addEventListener("focusout", ()=>{
             peopleErrorMessage.style.display = "block";
             peopleInputDiv.style.border = "2px solid red";
             peopleInput.value = "";
+        }else if(peopleInput.value < 0){
+            peopleErrorMessage.innerText = "Can't be negative";
+            peopleErrorMessage.style.display = "block";
+            peopleInputDiv.style.border = "2px solid red";
+            peopleInput.value = "";
         }else{
             peopleErrorMessage.style.display = null;
             peopleInputDiv.style.border = null;
@@ -60,6 +70,8 @@ customTipInput.addEventListener("focusout", ()=>{
         customTipInput.style.outline = "2px solid red";
     }else{
         if(customTipInput.value == 0){
+            customTipInput.style.outline = "2px solid red";
+        }else if(customTipInput.value < 0){
             customTipInput.style.outline = "2px solid red";
         }else{
             customTipInput.style.outline = "2px solid hsl(172, 67%, 45%)";
